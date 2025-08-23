@@ -24,6 +24,8 @@ export default function App() {
           <Route path="/creators/new" element={<AddCreator />} />
           <Route path="/creators/:id" element={<ViewCreator />} />
           <Route path="/creators/:id/edit" element={<EditCreator />} />
+          <Route path="*" element={<NotFound />} />
+
         </Routes>
       </main>
       <footer className="border-t bg-white">
