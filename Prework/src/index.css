@@ -15,7 +15,8 @@
 @layer components {
   .container { @apply max-w-6xl mx-auto px-6; }
 
-  .card { @apply bg-white rounded-2xl shadow-md ring-1 ring-black/5 overflow-hidden; }
+  .card { @apply bg-white rounded-2xl shadow-lg ring-1 ring-black/5 overflow-hidden transition; }
+  .card:hover { @apply shadow-xl ring-black/10; }
   .card-body { @apply p-6 space-y-3; }
   .card-header { @apply p-6 border-b bg-white/60 backdrop-blur; }
   .card-title { @apply text-xl font-semibold; }
@@ -52,6 +53,9 @@
   .skeleton { @apply animate-pulse bg-gray-200 rounded; }
   .skeleton-line { @apply skeleton h-4; }
   .skeleton-thumb { @apply skeleton h-40; }
+
+  /* Center and fit media inside any .card > .aspect-video container */
+  .card .aspect-video > img { @apply object-contain object-center; }
 }
 
 @layer utilities {

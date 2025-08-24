@@ -4,10 +4,11 @@ import ViewCreator from './pages/ViewCreator.jsx'
 import AddCreator from './pages/AddCreator.jsx'
 import EditCreator from './pages/EditCreator.jsx'
 import NotFound from './pages/NotFound.jsx'
+import Footer from './components/footer.jsx'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 flex flex-col">
       <header className="border-b bg-white/80 backdrop-blur">
         <div className="container py-4 flex items-center justify-between">
           <Link to="/creators" className="text-xl font-bold tracking-tight">Creatorverse</Link>
@@ -17,7 +18,7 @@ export default function App() {
           </nav>
         </div>
       </header>
-      <main className="container py-8">
+      <main className="container py-8 flex-1">
         <Routes>
           <Route path="/" element={<Navigate to="/creators" replace />} />
           <Route path="/creators" element={<ShowCreators />} />
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Footer />
     </div>
   )
 }
