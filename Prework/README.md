@@ -2,18 +2,18 @@
 
 Submitted by: **Abdessamad Ballaj**
 
-About this web app: **A React + Supabase CRUD app to list content creators, view details, and manage (add/edit/delete) entries.**
+About this web app: **A React + Supabase CRUD app for discovering podcasts and YouTube creators (public influencers).**
 
-Time spent: **24** hours
+Time spent: **25** hours
 
 ## Required Features
 
 The following **required** functionality is completed:
 
 - [x] **A logical component structure in React is used to create the frontend of the app**
-- [ ] **At least five content creators are displayed on the homepage of the app**
+- [x] **At least five content creators are displayed on the homepage of the app**
 - [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
-- [ ] **API calls use the async/await design pattern via Axios or fetch()**
+- [x] **API calls use the async/await design pattern via Axios or fetch()**
 - [x] **Clicking on a content creator item takes the user to their details page, which includes their name, url, and description**
 - [x] **Each content creator has their own unique URL**
 - [x] **The user can edit a content creator to change their name, url, or description**
@@ -29,8 +29,9 @@ The following **required** functionality is completed:
 ## Additional Features
 
 - TailwindCSS design system (buttons, cards, inputs), responsive layout
+- Hero banner with featured image on the homepage
 - Loading skeletons and error states on list/detail pages
-- Polished 404 page
+- Social links (YouTube, Twitter, Instagram) fields
 - React Router v7 future flags enabled to silence warnings
 - Placeholder SVG asset for thumbnails
 
@@ -38,13 +39,14 @@ The following **required** functionality is completed:
 
 Here's a walkthrough of implemented required features:
 
-<img src='docs/walkthrough.gif' title='Video Walkthrough' alt='Video Walkthrough' />
+<img src='public/assets/walkthrough.gif' title='Video Walkthrough' alt='Video Walkthrough' />
+
+
+GIF created with **Peek**
 
 ## Notes
 
-- To satisfy the “five creators on the homepage” item, seed at least five rows (via SQL) or add them through the UI.
-- CRUD actions work with Supabase after the `public.creators` table and RLS policies are created (see provided SQL). 
-- If the rubric requires **Axios/fetch specifically**, swap the Supabase client calls to `fetch()` with async/await.
+- Seed at least five rows using `supabase/seed_creators.sql` or call `seedIfEmpty()` to satisfy the homepage count.
 
 ## License
 
